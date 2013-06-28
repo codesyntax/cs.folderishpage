@@ -12,7 +12,7 @@ class IFolderishPage(form.Schema, IImageScaleTraversable):
     A folderish page
     """
 
-    text = RichText(label=_(u'Content'),
+    text = RichText(title=_(u'Content'),
                     required=False
         )
 
