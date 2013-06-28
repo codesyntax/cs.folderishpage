@@ -31,7 +31,7 @@
   <!-- -*- extra stuff goes here -*- -->
   <configure zcml:condition="installed collective.uploadify">
     <class class=".folderishpage.FolderishPage">
-      <implements interface="collective.uploadify.interfaces.IUploadingCapable" />
+      <implements interface="collective.uploadify.browser.interfaces.IUploadingCapable" />
     </class>
   </configure>
 
