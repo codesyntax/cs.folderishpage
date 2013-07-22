@@ -1,3 +1,4 @@
+from plone.app.contentlisting.interfaces import IContentListing
 from cs.folderishpage import MessageFactory as _
 from five import grok
 from plone.directives import dexterity, form
@@ -42,3 +43,12 @@ class FolderishPageView(grok.View):
     grok.context(IFolderishPage)
     grok.require('zope2.View')
     grok.name('view')
+
+
+class FolderishPageWithContents(grok.View):
+    grok.context(IFolderishPage)
+    grok.require('zope2.View')
+    grok.name('contentsview')
+
+    def contents(self):
+        return IContentListing(self.getFolderContents())
