@@ -51,4 +51,4 @@ class FolderishPageWithContents(grok.View):
     grok.name('contentsview')
 
     def contents(self):
-        return IContentListing(self.getFolderContents())
+        return IContentListing(self.context.getFolderContents())
