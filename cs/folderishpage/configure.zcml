@@ -24,7 +24,7 @@
       name="default"
       title="cs.folderishpage: Content-types"
       directory="profiles/default"
-      description="Content-types for cs.folderishpage. Dexterity-based folderish page"
+      description="Dexterity-based folderish page"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
