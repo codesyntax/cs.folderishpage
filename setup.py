@@ -26,7 +26,8 @@ setup(name='cs.folderishpage',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'five.grok'
+          'five.grok',
+          'collective.dexteritytextindexer'
           # -*- Extra requirements: -*-
       ],
       entry_points="""

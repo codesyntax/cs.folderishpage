@@ -2,7 +2,7 @@ from plone.app.contentlisting.interfaces import IContentListing
 from cs.folderishpage import MessageFactory as _
 from five import grok
 from plone.directives import dexterity, form
-
+from collective import dexteritytextindexer
 from plone.namedfile.interfaces import IImageScaleTraversable
 from plone.app.textfield import RichText
 
@@ -12,7 +12,7 @@ class IFolderishPage(form.Schema, IImageScaleTraversable):
     """
     A folderish page
     """
-
+    dexteritytextindexer.searchable('text')
     text = RichText(title=_(u'Content'),
                     required=False
         )
